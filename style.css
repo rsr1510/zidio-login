@@ -1,0 +1,468 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'IBM Plex Sans', sans-serif;
+}
+
+:root {
+    --dg: #1A4D2E;
+    --lg: #4F6F52;
+    --ds: #E8DFCA;
+    --ls: #F5EFE6;
+}
+
+body {
+    background-color: var(--ds);
+    text-align: center;
+    font-size: 20px;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    display: flex;
+    margin: 0 auto;
+    
+}
+
+.container {
+    background: var(--ls);
+    border-radius: 10px;
+    width: 800px;
+    max-width: 100%;
+    height: 500px;
+    margin-left: 218px;
+    position: absolute;
+    overflow-y: hidden;
+    box-shadow: 0 0px 28px rgba(0,0,0,.25), 0 5px 10px rgba(0,0,0,.22);
+}
+
+.form-cont {
+    position: absolute;
+    height: 100%;
+    top: 0;
+    width: 50%;
+    left: 0;
+    transition: all 0.6s ease-in-out;
+}
+
+form {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 40px;
+    height: 100%;
+    text-align: center;
+}
+
+form h1{
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
+
+.fi {
+    width: 100%;
+    padding: 10px 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+    box-shadow: inset 4px 4px 4px #cbced1, inset -4px -4px 4px white;
+}
+
+.minicon  {
+    margin: 10px 0;
+    font-size: 15px;
+    align-items: center; 
+    width: 100%; 
+    display: flex;
+    justify-content: space-between;
+}
+.minicon label{
+    display: flex;
+    margin-left: 2px;
+}
+.minicon p {
+    margin-left: 5px;
+}
+
+.forgot {
+    color: var(--dg);
+    text-decoration: none;
+}
+
+.forgot:hover {
+    text-decoration: underline;
+}
+
+.xyz {
+    margin: 10px 0;
+    width: 100%;
+    color: white;
+    background-color: var(--dg);
+    border: none;
+    padding: 10px 0;
+    text-align: center;
+    align-items: center;
+    border-radius: 5px;
+    cursor: pointer;
+
+} 
+
+button:hover {
+    background-color: var(--lg);
+    color: white;
+}
+
+.profile-choice {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    font-size: 18px;
+    border-bottom: #1A4D2E 2px solid;
+}
+
+ .profile-choice .stu {
+    border-radius: 5px 0px 0px 5px;
+    border-right: 1px #1A4D2E solid;
+}
+
+.profile-choice .educ {
+    border-radius: 0px 5px 5px 0px;
+    border-left: 1px #1A4D2E solid;
+}
+
+.profile-choice .btn {
+    margin: 10px 0;
+    width: 100%;
+    padding: 10px 0;
+    text-align: center;
+    align-items: center;
+    cursor: pointer;
+    border: #1A4D2E 1px solid;
+} 
+
+button img {
+    vertical-align: middle;
+    margin-right: 8px;
+}
+
+button span {
+    vertical-align: middle;
+} 
+
+.visme_d{
+    z-index: 10;
+}
+
+.or{
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.or-container {
+    display: flex;
+    align-items: center;
+    width: 105%;
+    margin: 0;
+}
+
+.or-container::before,
+.or-container::after {
+    content: '';
+    flex: 1;
+    border-bottom: 1px solid #000;
+    margin: 0 10px;
+}
+
+.highlight{
+    background-color: var(--dg);
+    color: white;
+}
+
+.buttonbg{
+    background-color: #F5EFE6;
+}
+
+.signin{
+    z-index: 1;
+}
+
+.signup{
+    z-index: 2;
+}
+
+
+.signup{
+    position: relative;
+    left: 50%;
+    width: 50%;
+} 
+
+
+.signup h1{
+    padding-top: 10px;
+    padding-bottom: 0px;
+}
+
+.signup .fi {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: none;
+    border-radius: 5px;
+} 
+.terms {
+    color: var(--dg);
+    text-decoration: none;
+}
+
+.terms:hover {
+    text-decoration: underline;
+}
+
+.overlay-container{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 100;
+    transition: all 0.6s ease-in-out;
+}
+
+.overlay{
+    background-color: #1A4D2E;
+    background: linear-gradient(to right, rgb(1, 124, 38),rgb(0, 75, 23));
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 0 0;
+    color: white;
+    position: relative;
+    left: -100%;
+    height: 100%;
+    width: 200%;
+    transform: translateX(0);
+    transition: all 0.6s ease-in-out;
+}
+
+.overlay-panel{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    text-align: center;
+    top: 0;
+    height: 100%;
+    width: 50%;
+    transform: translateX(0);
+    transition: all 0.6s ease-in-out;
+}
+
+.overlay-left{
+    transform: translateX(-20%);
+}
+
+.overlay-right{
+    right: 10%;
+    transform: translateX(20%);
+}
+
+.xyz:active, .press:active{
+    transform: scale(0.95);
+}
+
+.press{
+    background-color: transparent;
+    border-color:white;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 10px;
+}
+
+.container.right-panel-active .sigin{
+    transform: translateX(100%);
+}
+
+.container.right-panel-active.signup{
+    transform: translateX(100%);
+    opacity: 1;
+    z-index: 5;
+    animation: slide 0.6s;
+}
+
+.password-cont {
+    position: relative;
+    width: 100%;
+}
+
+.password-toggle {
+    position: absolute;
+    top: 48%;
+    right: 10px;
+    transform: translateY(-50%);
+    cursor: pointer;
+    vertical-align: middle;
+} 
+
+.password-toggle span {
+    vertical-align: middle;
+} 
+
+.password-toggle i {
+    font-size: 15px;
+    color: gray;
+}
+
+.error-message {
+    color: red;
+    font-size: 14px;
+    margin-top: -10px;
+    margin-bottom: 10px;
+    display: none;
+}
+
+/* Modal styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+}
+
+#forgotPasswordModal .modal-content{
+    background-color: var(--);
+    margin: 144px 574px;
+    transform: translateX(-23.5%);
+    padding: 40px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 387px;
+    border-radius: 10px;
+    justify-content: center;
+    text-align: justify;
+    
+    
+}
+
+#forgotPasswordModal button,#forgotPasswordModal .error-box, #forgotPasswordModal .fi, #forgotPasswordModal .profile-choice {
+    width: 135%;
+}
+
+
+
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 8% auto;
+    padding: 40px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 1080px;
+    border-radius: 10px;
+    justify-content: center;
+    text-align: justify;
+}
+
+.modal h2{
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.modal p{
+    padding: 15px 0;
+}
+#forgotPasswordModal p{
+    padding: 15px 0 30px 0;
+}
+
+.modal ul{
+    padding-left: 20px;
+}
+
+.close-btn {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Error box styles */
+.error-box {
+    display: none; /* Hidden by default */
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    z-index: 100; 
+    width: 100%;
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.error-box p {
+    margin: 0;
+}
+
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+.fade-out {
+    animation: fadeOut 0.5s forwards; /* Apply fade-out animation */
+}
+
+
+@keyframes slide{
+    0%, 49.99%{
+        opacity: 0;
+        z-index: 1;
+    }
+    50%, 100%{
+        opacity: 1;
+        z-index: 5;
+    }
+}
+
+.container.right-panel-active .overlay-container{
+    transform: translateX(-100%);
+}
+
+.container.right-panel-active .overlay{
+    transform: translateX(50%);
+}
+
+.container.right-panel-active .overlay-left{
+    transform: translateX(0);
+}
+
+.container.right-panel-active .overlay-right{
+    transform: translateX(20%);
+}
+
